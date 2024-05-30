@@ -3,7 +3,7 @@ session_start();
 include('config.php');
 
 if ($_SESSION['user_level'] != 1) {
-    header("Location: login_form.php");
+    header("Location: login.html");
     exit();
 }
 
@@ -148,6 +148,20 @@ $rendez_vous = $stmt->get_result();
         .edit-button {
             display: none;
         }
+
+        .logout-button {
+            background-color: #d9534f;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .logout-button:hover {
+            background-color: #c9302c;
+        }
     </style>
     <script>
         function toggleEditMode() {
@@ -247,6 +261,10 @@ $rendez_vous = $stmt->get_result();
                 <?php endwhile; ?>
             </table>
         </div>
+
+        <form action="logout.php" method="POST">
+            <button type="submit" class="logout-button">Se déconnecter</button>
+        </form>
     </div>
 </body>
 </html>
