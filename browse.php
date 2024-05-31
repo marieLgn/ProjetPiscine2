@@ -88,7 +88,7 @@
             <a href="browse.php">Tout parcourir</a>
             <a href="search.php">Rechercher</a>
             <a href="rendez_vous.php">Rendez-vous</a>
-            <a href="account.php">Votre compte</a>
+            <a href="login.php">Votre compte</a>
         </nav>
         <div class="container">
             <h2>Tout Parcourir</h2>
@@ -167,8 +167,6 @@
         </div>
         <footer>
             <p>&copy; 2024 Omnes Immobilier. Tous droits réservés.</p>
-            <p>Email : contact@omnesimmobilier.com | Téléphone : 01 23 45 67 89</p>
-            <div id="map" style="height: 200px; width: 100%;"></div>
         </footer>
     </div>
 </body>

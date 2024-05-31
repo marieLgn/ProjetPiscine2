@@ -150,7 +150,7 @@ if ($agents->num_rows > 0) {
             <a href="browse.php">Tout parcourir</a>
             <a href="search.php">Rechercher</a>
             <a href="rendez_vous.php">Rendez-vous</a>
-            <a href="login.html">Votre compte</a> <!-- Lien mis à jour -->
+            <a href="login.php">Votre compte</a> <!-- Lien mis à jour -->
         </nav>
         <div class="container">
             <h2>Rendez-vous</h2>

@@ -3,7 +3,7 @@ session_start();
 include('config.php');
 
 if ($_SESSION['user_level'] != 1) {
-    header("Location: login.html");
+    header("Location: login.php");
     exit();
 }
 
