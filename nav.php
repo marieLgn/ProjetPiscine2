@@ -1,7 +1,7 @@
 <header>
 
     <h1 style="display: flex; align-items: center;">
-        <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Propriété 1"> /\___Omnes Emmobilier___/\
+        <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Propriété 1"> Omnes Emmobilier
     </h1>
     <nav>
         <a href="index.php">Accueil</a>

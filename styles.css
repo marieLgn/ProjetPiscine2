@@ -432,3 +432,13 @@ footer {
 .page-rendez-vous .view-cv button:hover {
     background-color: #e5006b;
 }
+
+/* Sections */
+section {
+    background-color: #444; /* Fond gris foncé pour les sections */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère autour des sections */
+    width: 80%;
+}
