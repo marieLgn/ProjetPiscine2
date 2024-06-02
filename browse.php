@@ -33,7 +33,7 @@
             <div class="row">
                 <?php
                 include 'config.php';
-        // recherche
+        // recherche d'une proprete
                 $sql = "SELECT * FROM propriete";
                 $result = $conn->query($sql);
 
