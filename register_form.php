@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Inscription</title>
     <link rel="stylesheet" href="styles.css">
+
+    <h1 style="display: flex; align-items: center;">
+            <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 600px;" alt="Propriété 1"> Omnes Emmobilier
+            </h1>
 </head>
 <body style="font-family: 'Courier New', monospace; background-color: #1b1b1b; color: #c0c0c0; margin: 0; padding: 0;">
     <nav>

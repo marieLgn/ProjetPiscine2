@@ -43,14 +43,16 @@ if ($agents->num_rows > 0) {
 <body>
     <div class="wrapper">
         <header>
-            <h1>Omnes Immobilier</h1>
+        <h1 style="display: flex; align-items: center;">
+            <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Propriété 1"> Omnes Emmobilier
+            </h1>
         </header>
         <nav>
             <a href="index.php">Accueil</a>
             <a href="browse.php">Tout parcourir</a>
             <a href="search.php">Rechercher</a>
             <a href="rendez_vous.php">Rendez-vous</a>
-            <a href="login.php">Votre compte</a> <!-- Lien mis à jour -->
+            <a href="login.php">Votre compte</a> 
         </nav>
         <div class="container">
             <h2>Rendez-vous</h2>
@@ -101,7 +103,7 @@ if ($agents->num_rows > 0) {
             <?php endif; ?>
         </div>
         <footer>
-            <p>&copy; 2024 Omnes Immobilier. Tous droits réservés.</p>
+            <p>&copy; 2024 Omnes Emmobilier. Tous droits réservés.</p>
         </footer>
     </div>
 </body>

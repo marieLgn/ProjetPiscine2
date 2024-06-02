@@ -31,6 +31,17 @@ $client = $result->fetch_assoc();
     <title>Dossier Client</title>
 </head>
 <body>
+<h1 style="display: flex; align-items: center;">
+            <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Propriété 1"> Omnes Emmobilier
+            </h1>
+        </header>
+        <nav>
+            <a href="index.php">Accueil</a>
+            <a href="browse.php">Tout parcourir</a>
+            <a href="search.php">Rechercher</a>
+            <a href="rendez_vous.php">Rendez-vous</a>
+            <a href="login.php">Votre compte</a> <!-- Lien mis à jour -->
+        </nav>
     <div class="container">
         <h1>Dossier de <?php echo $client['Prenom'] . ' ' . $client['Nom']; ?></h1>
 
