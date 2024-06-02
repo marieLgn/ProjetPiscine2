@@ -373,3 +373,62 @@ footer {
 .time-slot:hover {
     background-color: #444;
 }
+
+/* Styles spécifiques à la page de rendez-vous */
+.page-rendez-vous .container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.page-rendez-vous .agent-schedule h3 {
+    color: #ff4081;
+}
+
+.page-rendez-vous .schedule {
+    display: grid;
+    grid-template-columns: 80px repeat(6, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.page-rendez-vous .day, .page-rendez-vous .time-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #ff4081;
+    color: #000;
+    border-radius: 5px;
+}
+
+.page-rendez-vous .time-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;  /* Change to white background */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-rendez-vous .time-slot:hover {
+    background-color: #f0f0f0;  /* Slightly darker white for hover effect */
+}
+
+.page-rendez-vous .view-cv button {
+    background-color: #ff4081;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-rendez-vous .view-cv button:hover {
+    background-color: #e5006b;
+}

@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost:3307"; // Assurez-vous que le port est correct
+$servername = "localhost"; // Assurez-vous que le port est correct
 $username = "root";
 $password = ""; // Mettez le mot de passe si nécessaire
 $dbname = "emobillier2"; // Utilisez le nom correct de la base de données
