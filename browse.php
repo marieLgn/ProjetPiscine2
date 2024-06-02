@@ -4,84 +4,15 @@
     <meta charset="UTF-8">
     <title>Tout Parcourir - Omnes Immobilier</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #007BFF;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        nav a:hover {
-            background-color: #0056b3;
-        }
-        .container {
-            flex: 1;
-            width: 90%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-        }
-        .category {
-            margin-bottom: 20px;
-        }
-        .category h3 {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            margin: 0;
-        }
-        .category ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .category ul li {
-            border-bottom: 1px solid #ddd;
-            padding: 10px;
-        }
-        .category ul li a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-        .category ul li a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="wrapper">
         <header>
-            <h1>Omnes Immobilier</h1>
+            <h1 style="display: flex; align-items: center;">
+                <img src="Image/Logo.jpg" style="height: 100%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
+            </h1>
         </header>
         <nav>
             <a href="index.php">Accueil</a>
@@ -90,84 +21,68 @@
             <a href="rendez_vous.php">Rendez-vous</a>
             <a href="login.php">Votre compte</a>
         </nav>
-        <div class="container">
+        <div class="container" >
             <h2>Tout Parcourir</h2>
-            <div class="categories">
-                <div class="category">
-                    <h3>Immobilier résidentiel</h3>
-                    <ul>
-                        <?php
-                        include 'config.php';
+            <div class="btn-group mb-3" role="group" aria-label="Filtrer les biens immobiliers">
+                <button type="button" class="btn btn-primary filter-btn" data-filter="all">Tous</button>
+                <button type="button" class="btn btn-primary filter-btn" data-filter="Résidentiel">Immobilier résidentiel</button>
+                <button type="button" class="btn btn-primary filter-btn" data-filter="Commercial">Immobilier commercial</button>
+                <button type="button" class="btn btn-primary filter-btn" data-filter="Terrain">Terrain</button>
+                <button type="button" class="btn btn-primary filter-btn" data-filter="Appartement à louer">Appartement à louer</button>
+            </div>
+            <div class="row">
+                <?php
+                include 'config.php';
 
-                        $sql = "SELECT * FROM propriete WHERE Type_propriete = 'Résidentiel'";
-                        $result = $conn->query($sql);
+                $sql = "SELECT * FROM propriete";
+                $result = $conn->query($sql);
 
-                        if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
-                                echo "<li><a href='property.php?id=" . $row['Id_Propriete'] . "'>" . $row['Adresse'] . "</a></li>";
-                            }
-                        } else {
-                            echo "<li>Aucune propriété disponible.</li>";
-                        }
-                        ?>
-                    </ul>
-                </div>
-                <div class="category">
-                    <h3>Immobilier commercial</h3>
-                    <ul>
-                        <?php
-                        $sql = "SELECT * FROM propriete WHERE Type_propriete = 'Commercial'";
-                        $result = $conn->query($sql);
-
-                        if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
-                                echo "<li><a href='property.php?id=" . $row['Id_Propriete'] . "'>" . $row['Adresse'] . "</a></li>";
-                            }
-                        } else {
-                            echo "<li>Aucune propriété disponible.</li>";
-                        }
-                        ?>
-                    </ul>
-                </div>
-                <div class="category">
-                    <h3>Terrain</h3>
-                    <ul>
-                        <?php
-                        $sql = "SELECT * FROM propriete WHERE Type_propriete = 'Terrain'";
-                        $result = $conn->query($sql);
-
-                        if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
-                                echo "<li><a href='property.php?id=" . $row['Id_Propriete'] . "'>" . $row['Adresse'] . "</a></li>";
-                            }
-                        } else {
-                            echo "<li>Aucune propriété disponible.</li>";
-                        }
-                        ?>
-                    </ul>
-                </div>
-                <div class="category">
-                    <h3>Appartement à louer</h3>
-                    <ul>
-                        <?php
-                        $sql = "SELECT * FROM propriete WHERE Type_propriete = 'Appartement à louer'";
-                        $result = $conn->query($sql);
-
-                        if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
-                                echo "<li><a href='property.php?id=" . $row['Id_Propriete'] . "'>" . $row['Adresse'] . "</a></li>";
-                            }
-                        } else {
-                            echo "<li>Aucune propriété disponible.</li>";
-                        }
-                        ?>
-                    </ul>
-                </div>
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<div class='col-md-4 mb-4 property-item' data-type='" . $row['Type_propriete'] . "'>";
+                        echo "<div class='card'>";
+                        echo "<img src='" . $row['Image'] . "' class='card-img-top' alt='" . $row['Adresse'] . "'>";
+                        echo "<div class='card-body'>";
+                        echo "<h5 class='card-title'>" . $row['Adresse'] . "</h5>";
+                        echo "<a href='property.php?id=" . $row['Id_Propriete'] . "' class='btn btn-primary'>Voir plus</a>";
+                        echo "</div>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                } else {
+                    echo "<p>Aucune propriété disponible.</p>";
+                }
+                ?>
             </div>
         </div>
         <footer>
-            <p>&copy; 2024 Omnes Immobilier. Tous droits réservés.</p>
+            <p>&copy; 2024 Omnes Emmobilier. Tous droits réservés.</p>
         </footer>
     </div>
+
+    <!-- Lien vers Bootstrap JS et jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const propertyItems = document.querySelectorAll('.property-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    propertyItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-type') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -27,62 +27,8 @@ $client = $result->fetch_assoc();
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <title>Dossier Client</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        .profile-section {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .profile-section label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .profile-section input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .back-button {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
     <div class="container">

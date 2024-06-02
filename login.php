@@ -54,76 +54,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .login-container {
-            width: 300px;
-            margin: 100px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        .back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-        h2 {
-            text-align: center;
-            margin: 40px 0 20px 0;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            border: none;
-            color: white;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <nav>
+            <a href="index.php">Accueil</a>
+            <a href="browse.php">Tout parcourir</a>
+            <a href="search.php">Rechercher</a>
+            <a href="rendez_vous.php">Rendez-vous</a>
+            <a href="login.php">Votre compte</a>
+    </nav>
 </head>
+
 <body>
     <div class="login-container">
-        <a href="index.php" class="back-button">Retour</a>
         <h2>Se connecter</h2>
         <?php if (isset($login_error)) echo "<p style='color: red; text-align: center;'>$login_error</p>"; ?>
         <form action="login.php" method="POST">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            <label for="password">Password:</label>
+            <label for="password">Mot de passe:</label>
             <input type="password" id="password" name="password" required>
-            <button type="submit" name="login">Login</button>
+            <button type="submit" name="login">Connexion</button>
         </form>
+        <p>Pas de compte ? <a href="register_form.php" class="btn btn-secondary">S'inscrire</a></p>
     </div>
 </body>
 </html>

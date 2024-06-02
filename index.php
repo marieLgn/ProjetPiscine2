@@ -2,70 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Accueil - Omnes Immobilier</title>
+    <title>Accueil - Omnes Emmobilier</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #007BFF;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        nav a:hover {
-            background-color: #0056b3;
-        }
-        .container {
-            flex: 1;
-            width: 90%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .carousel-item img {
-            max-height: 400px;
-            object-fit: cover;
-            width: 100%;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-        }
-        .event-section, .welcome-section {
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <h1>Omnes Immobilier</h1>
+        
+            <h1 style="display: flex; align-items: center;">
+            <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Propriété 1"> Omnes Emmobilier
+            </h1>
         </header>
         <nav>
             <a href="index.php">Accueil</a>
@@ -76,7 +23,7 @@
         </nav>
         <div class="container">
             <div class="welcome-section">
-                <h2>Bienvenue chez Omnes Immobilier</h2>
+                <h2>Bienvenue chez Omnes Emmobilier</h2>
                 <p>Bienvenue sur notre site. Nous sommes ravis de vous aider à trouver la maison de vos rêves. Explorez nos offres et contactez-nous pour plus d'informations.</p>
             </div>
             <div class="event-section">
@@ -91,13 +38,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="property1.jpg" class="d-block w-100" alt="Propriété 1">
+                        <img src="Image\property1.jpg" class="d-block w-100" alt="Propriété 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="property2.jpg" class="d-block w-100" alt="Propriété 2">
+                        <img src="Image\property2.jpg" class="d-block w-100" alt="Propriété 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="property3.jpg" class="d-block w-100" alt="Propriété 3">
+                        <img src="Image\property3.jpg" class="d-block w-100" alt="Propriété 3">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -111,9 +58,9 @@
             </div>
         </div>
         <footer>
-            <p>&copy; 2024 Omnes Immobilier. Tous droits réservés.</p>
-            <p>Email : contact@omnesimmobilier.com | Téléphone : 01 23 45 67 89</p>
-            <div id="map" style="height: 200px; width: 100%;"></div>
+            <p>&copy; 2024 Omnes Emmobilier. Tous droits réservés.</p>
+            <p>Email : contact@omnesemmobilier.com | Téléphone : 01 23 45 67 89</p>
+            <div id="map" style="height: 1px; width: 100%;"></div>
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -132,6 +79,6 @@
             });
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9999447347695!2d2.294481315674134!3d48.85884407928711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdd7e75adbf%3A0x8f1f9b0f5f4e7f8c!2sTour%20Eiffel!5e0!3m2!1sen!2sfr!4v1597045516535!5m2!1sen!2sfr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </body>
 </html>
