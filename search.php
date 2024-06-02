@@ -2,71 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Rechercher - Omnes Immobilier</title>
+    <title>Rechercher - Omnes Emmobilier</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #007BFF;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        nav a:hover {
-            background-color: #0056b3;
-        }
-        .container {
-            flex: 1;
-            width: 90%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-        }
-        .search-form {
-            margin-bottom: 20px;
-        }
-        .search-form label {
-            font-weight: bold;
-        }
-        .search-results {
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <h1>Omnes Immobilier</h1>
+            <h1 style="display: flex; align-items: center;">
+            <img src="Image/Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
+            </h1>
         </header>
         <nav>
             <a href="index.php">Accueil</a>
@@ -130,7 +75,7 @@
             </div>
         </div>
         <footer>
-            <p>&copy; 2024 Omnes Immobilier. Tous droits réservés.</p>
+            <p>&copy; 2024 Omnes Emmobilier. Tous droits réservés.</p>
         </footer>
     </div>
 </body>
