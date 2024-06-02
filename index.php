@@ -23,7 +23,7 @@
         </nav>
         <div class="container">
             <div class="welcome-section">
-                <h2>Bienvenue chez Omnes Emmobilier</h2>
+                <h2>Bienvenue chez Omnes Emobilier</h2>
                 <p>Bienvenue sur notre site. Nous sommes ravis de vous aider à trouver la maison de vos rêves. Explorez nos offres et contactez-nous pour plus d'informations.</p>
             </div>
             <div class="event-section">
