@@ -8,19 +8,9 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
-        
-            <h1 style="display: flex; align-items: center;">
-            <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Propriété 1"> Omnes Emmobilier
-            </h1>
-        </header>
-        <nav>
-            <a href="index.php">Accueil</a>
-            <a href="browse.php">Tout parcourir</a>
-            <a href="search.php">Rechercher</a>
-            <a href="rendez_vous.php">Rendez-vous</a>
-            <a href="login.php">Votre compte</a>
-        </nav>
+        <?php
+        include ('nav.php')
+        ?>
         <div class="container">
             <div class="welcome-section">
                 <h2>Bienvenue chez Omnes Emmobilier</h2>
@@ -57,11 +47,9 @@
                 </a>
             </div>
         </div>
-        <footer>
-            <p>&copy; 2024 Omnes Emmobilier. Tous droits réservés.</p>
-            <p>Email : contact@omnesemmobilier.com | Téléphone : 01 23 45 67 89</p>
-            <div id="map" style="height: 1px; width: 100%;"></div>
-        </footer>
+        <?php
+        include ('footer.php')
+        ?>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

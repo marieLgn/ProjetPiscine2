@@ -54,16 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
-    <nav>
-            <a href="index.php">Accueil</a>
-            <a href="browse.php">Tout parcourir</a>
-            <a href="search.php">Rechercher</a>
-            <a href="rendez_vous.php">Rendez-vous</a>
-            <a href="login.php">Votre compte</a>
-    </nav>
 </head>
 
 <body>
+<div class="wrapper">
+    <?php
+    include ('nav.php')
+    ?>
     <div class="login-container">
         <h2>Se connecter</h2>
         <?php if (isset($login_error)) echo "<p style='color: red; text-align: center;'>$login_error</p>"; ?>
@@ -76,5 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
         <p>Pas de compte ? <a href="register_form.php" class="btn btn-secondary">S'inscrire</a></p>
     </div>
+</div>
 </body>
+<?php
+include ('footer.php')
+?>
 </html>

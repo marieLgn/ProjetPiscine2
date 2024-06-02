@@ -9,18 +9,9 @@
 
 <body>
     <div class="wrapper">
-        <header>
-            <h1 style="display: flex; align-items: center;">
-                <img src="Image/Logo.jpg" style="height: 100%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
-            </h1>
-        </header>
-        <nav>
-            <a href="index.php">Accueil</a>
-            <a href="browse.php">Tout parcourir</a>
-            <a href="search.php">Rechercher</a>
-            <a href="rendez_vous.php">Rendez-vous</a>
-            <a href="login.php">Votre compte</a>
-        </nav>
+        <?php
+        include ('nav.php')
+        ?>
         <div class="container" >
             <h2>Tout Parcourir</h2>
             <div class="btn-group mb-3" role="group" aria-label="Filtrer les biens immobiliers">
@@ -55,9 +46,9 @@
                 ?>
             </div>
         </div>
-        <footer>
-            <p>&copy; 2024 Omnes Emmobilier. Tous droits réservés.</p>
-        </footer>
+        <?php
+        include ('footer.php')
+        ?>
     </div>
 
     <!-- Lien vers Bootstrap JS et jQuery -->

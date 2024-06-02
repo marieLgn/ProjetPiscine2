@@ -42,16 +42,9 @@ if ($agents->num_rows > 0) {
 </head>
 <body>
 <div class="wrapper page-rendez-vous">
-    <header>
-        <h1>Omnes Immobilier</h1>
-    </header>
-    <nav>
-        <a href="index.php">Accueil</a>
-        <a href="browse.php">Tout parcourir</a>
-        <a href="search.php">Rechercher</a>
-        <a href="rendez_vous.php">Rendez-vous</a>
-        <a href="login.php">Votre compte</a> <!-- Lien mis à jour -->
-    </nav>
+    <?php
+    include ('nav.php')
+    ?>
     <div class="container">
         <h2>Rendez-vous</h2>
         <?php if ($agents->num_rows > 0): ?>
@@ -100,9 +93,9 @@ if ($agents->num_rows > 0) {
             <p>Aucun agent disponible.</p>
         <?php endif; ?>
     </div>
-    <footer>
-        <p>&copy; 2024 Omnes Immobilier. Tous droits réservés.</p>
-    </footer>
+    <?php
+    include ('footer.php')
+    ?>
 </div>
 </body>
 </html>
