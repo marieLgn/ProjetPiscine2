@@ -3,7 +3,7 @@ session_start();
 include('config.php');
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login_form.php");
+    header("Location: view_cv.php");
     exit();
 }
 
@@ -40,8 +40,9 @@ if ($agents->num_rows > 0) {
     <title>Rendez-vous - Omnes Immobilier</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Courier New', monospace;
+            background-color: #1b1b1b;
+            color: #c0c0c0;
             margin: 0;
             padding: 0;
         }
@@ -60,8 +61,8 @@ if ($agents->num_rows > 0) {
         }
 
         nav {
-            background-color: #007BFF;
-            color: white;
+            background-color: #ff4081;
+            color: #000;
             display: flex;
             justify-content: space-around;
             padding: 10px;
@@ -75,16 +76,16 @@ if ($agents->num_rows > 0) {
         }
 
         nav a:hover {
-            background-color: #0056b3;
+            background-color: #e5006b;
         }
 
+
         .container {
-            flex: 1;
-            width: 90%;
+            width: 80%;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #2c2c2c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .schedule {
@@ -141,16 +142,18 @@ if ($agents->num_rows > 0) {
     </style>
 </head>
 <body>
-    <div class="wrapper">
+<div class="wrapper">
         <header>
-            <h1>Omnes Immobilier</h1>
+            <h1 style="display: flex; align-items: center;">
+            <img src="Image/Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
+            </h1>
         </header>
         <nav>
             <a href="index.php">Accueil</a>
             <a href="browse.php">Tout parcourir</a>
             <a href="search.php">Rechercher</a>
             <a href="rendez_vous.php">Rendez-vous</a>
-            <a href="login.php">Votre compte</a> <!-- Lien mis à jour -->
+            <a href="login.php">Votre compte</a>
         </nav>
         <div class="container">
             <h2>Rendez-vous</h2>
@@ -191,7 +194,7 @@ if ($agents->num_rows > 0) {
                             <?php endforeach; ?>
                         </div>
                         <form method="GET" action="view_cv.php" class="view-cv">
-                            <input type="hidden" name="id_cv" value="<?php echo $agent['Id_CV']; ?>">
+                            <input type="hidden" name="id_agent" value="<?php echo $agent['Id_Agent']; ?>">
                             <button type="submit">Voir CV</button>
                         </form>
                     </div>

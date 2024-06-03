@@ -35,189 +35,7 @@ $clients = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>Tableau de bord agent immobilier</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            width: 100%;
-            background-color: #333;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            box-sizing: border-box;
-        }
-
-        .header .title {
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        .header .title h1 {
-            margin: 0;
-        }
-
-        .header .icon, .header .back-button {
-            cursor: pointer;
-        }
-
-        .header .back-button {
-            background-color: #d9534f;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            color: white;
-        }
-
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        .table-section {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .logout-button {
-            background-color: #d9534f;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .logout-button:hover {
-            background-color: #c9302c;
-        }
-
-        .messenger-popup {
-            display: none;
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 600px; /* Largeur augmentée */
-            height: 500px; /* Hauteur réduite */
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .messenger-header {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            border-radius: 5px 5px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .messenger-header .back-button-conversation {
-            background-color: #d9534f;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .messenger-body {
-            flex: 1;
-            max-height: 350px;
-            overflow-y: auto;
-            padding: 20px; /* Augmenté pour plus d'espace */
-        }
-
-        .messenger-footer {
-            padding: 20px; /* Augmenté pour plus d'espace */
-            border-top: 1px solid #ccc;
-        }
-
-        .messenger-footer input {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .messenger-footer button {
-            width: 18%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-        }
-
-        .conversation-list div {
-            cursor: pointer;
-            padding: 20px; /* Augmenté pour plus d'espace */
-            border-bottom: 1px solid #ccc;
-        }
-
-        .conversation-list div:hover {
-            background-color: #f2f2f2;
-        }
-
-        .message {
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .message.sent {
-            background-color: #007BFF;
-            color: white;
-            align-self: flex-end;
-        }
-
-        .message.received {
-            background-color: #f1f1f1;
-            color: black;
-            align-self: flex-start;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <script>
         function toggleMessenger() {
             var messengerPopup = document.getElementById("messengerPopup");
@@ -279,9 +97,17 @@ $clients = $stmt->get_result();
 </head>
 <body>
     <div class="header">
-        <button class="back-button">Retour</button>
         <div class="title">
-            <h1>Omnes Immobilier</h1>
+        <h1 style="display: flex; align-items: center;">
+            <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Propriété 1"> Omnes Emmobilier
+        </h1>
+        <nav>
+            <a href="index.php">Accueil</a>
+            <a href="browse.php">Tout parcourir</a>
+            <a href="search.php">Rechercher</a>
+            <a href="rendez_vous.php">Rendez-vous</a>
+            <a href="login.php">Votre compte</a> 
+        </nav>
         </div>
         <div class="icon" onclick="toggleMessenger()">📧</div>
     </div>
