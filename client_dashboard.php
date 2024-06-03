@@ -191,7 +191,7 @@ $rendez_vous = $stmt->get_result();
                 <label for="ville">Ville:</label>
                 <input type="text" id="ville" name="ville" value="<?php echo isset($client['Ville']) ? $client['Ville'] : ''; ?>" disabled required>
                 <button type="button" id="editButton" onclick="toggleEditMode()">Modifier</button>
-                <button type="submit" name="update_profile" id="updateButton" class="edit-button"style="display: none;>Enregistrer</button>
+                <button type="submit" name="update_profile" id="updateButton" class="edit-button" style="display: none;">Enregistrer</button>
             </form>
         </div>
 

@@ -10,7 +10,7 @@
     <div class="wrapper">
         <header>
             <h1 style="display: flex; align-items: center;">
-            <img src="Logo.png" style="height: 10%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
+            <img src="Image/Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
             </h1>
         </header>
         <nav>

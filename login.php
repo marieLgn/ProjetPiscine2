@@ -4,7 +4,6 @@ include('config.php');
 
 function login($email, $password) {
     global $conn;
-    // Vérification pour tous les utilisateurs
     $sql = "
         SELECT Id_Client AS user_id, 'client' AS user_type, Mot_de_passe FROM Client WHERE Email = ? UNION ALL
         SELECT Id_Agent AS user_id, 'agent' AS user_type, Mot_de_passe FROM Agent WHERE Email = ? UNION ALL
@@ -18,12 +17,12 @@ function login($email, $password) {
         while ($user = $result->fetch_assoc()) {
             if ($password === $user['Mot_de_passe']) {  // Comparaison en clair
                 $_SESSION['user_id'] = $user['user_id'];
-                // Définir le niveau de l'utilisateur en fonction de l'ID
-                if (substr($user['user_id'], 0, 1) == '1') {
+                $_SESSION['user_type'] = $user['user_type'];
+                if ($user['user_type'] == 'client') {
                     $_SESSION['user_level'] = 1;
-                } elseif (substr($user['user_id'], 0, 1) == '2') {
+                } elseif ($user['user_type'] == 'agent') {
                     $_SESSION['user_level'] = 2;
-                } elseif (substr($user['user_id'], 0, 1) == '3') {
+                } elseif ($user['user_type'] == 'admin') {
                     $_SESSION['user_level'] = 3;
                 }
                 return true;
@@ -46,28 +45,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
-
-    <h1 style="display: flex; align-items: center;">
-            <img src="Image\Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Propriété 1"> Omnes Emmobilier
-     </h1>
-    <nav>
-            <a href="index.php">Accueil</a>
-            <a href="browse.php">Tout parcourir</a>
-            <a href="search.php">Rechercher</a>
-            <a href="rendez_vous.php">Rendez-vous</a>
-            <a href="login.php">Votre compte</a>
-    </nav>
 </head>
-
 <body>
+    <header>
+        <h1 style="display: flex; align-items: center;">
+            <img src="Image/Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
+        </h1>
+    </header>
+    <nav>
+        <a href="index.php">Accueil</a>
+        <a href="browse.php">Tout parcourir</a>
+        <a href="search.php">Rechercher</a>
+        <a href="rendez_vous.php">Rendez-vous</a>
+        <?php if (isset($_SESSION['user_id'])): ?>
+            <a href="dashboard.php">Votre compte</a>
+        <?php else: ?>
+            <a href="login.php">Votre compte</a>
+        <?php endif; ?>
+    </nav>
     <div class="login-container">
         <h2>Se connecter</h2>
         <?php if (isset($login_error)) echo "<p style='color: red; text-align: center;'>$login_error</p>"; ?>
