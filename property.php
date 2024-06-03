@@ -1,8 +1,7 @@
 <?php
 include 'config.php';
-session_start(); // Démarre la session pour vérifier si l'utilisateur est connecté
+session_start(); 
 
-// Fetch property details
 $id = intval($_GET['id']);
 $sql = "SELECT * FROM propriete WHERE Id_Propriete = $id";
 $result = $conn->query($sql);
@@ -20,7 +19,7 @@ $property = $result->fetch_assoc();
     <div class="wrapper">
         <header>
             <h1 style="display: flex; align-items: center;">
-            <img src="Image/Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
+                <img src="Image/Logo.jpg" style="height: 10%; width: 10%; margin-right: 550px;" alt="Logo"> Omnes Emmobilier
             </h1>
         </header>
         <nav>
@@ -32,7 +31,7 @@ $property = $result->fetch_assoc();
         </nav>
         <div class="container">
             <h2><?php echo $property['Adresse']; ?></h2>
-            <img src="<?php echo isset($property['Photo']) ? $property['Photo'] : 'default.jpg'; ?>" alt="Photo de la propriété" class="img-fluid">
+            <img src="<?php echo isset($property['Image']) ? $property['Image'] : 'default.jpg'; ?>" alt="Photo de la propriété" class="img-fluid">
             <p><?php echo $property['Description']; ?></p>
             <ul>
                 <li>Ville: <?php echo $property['Ville']; ?></li>
@@ -67,7 +66,7 @@ $property = $result->fetch_assoc();
                 }
             </script>
         </footer>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9999447347695!2d2.294481315674134!3d48.85884407928711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdd7e75adbf%3A0x8f1f9b0f5f4e7f8c!2sTour%20Eiffel!5e0!3m2!1sen!2sfr!4v1597045516535!5m2!1sen!2sfr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9999447347695!2d2.294481315674134!3d48.85884407928711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdd7e75adbf%3A0x8f1f9b0f5f4e7f8c!2sTour%20Eiffel!5e0!3m2!1sen!2sfr!4v1597045516535!5m2!1sen!2sfr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
 </body>
 </html>

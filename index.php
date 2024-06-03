@@ -27,8 +27,16 @@
                 <p>Bienvenue sur notre site. Nous sommes ravis de vous aider à trouver la maison de vos rêves. Explorez nos offres et contactez-nous pour plus d'informations.</p>
             </div>
             <div class="event-section">
-                <h2>Évènement de la semaine</h2>
-                <p>Cette semaine, nous organisons une porte ouverte pour vous permettre de découvrir nos nouvelles propriétés. Rejoignez-nous le samedi à partir de 10h.</p>
+                <h2><br>Évènement de la semaine</h2>
+                <p>Cette semaine, nous organisons une porte ouverte pour vous permettre de découvrir nos nouvelles propriétés. Rejoignez-nous le samedi à partir de 10h.<br></p>
+                <img src="Image\facade.png" class="d-block w-100" alt="Propriété 1">
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="welcome-section">
+                <h2>Propriétés en vogue</h2>
             </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -56,6 +64,31 @@
                     <span class="sr-only">Suivant</span>
                 </a>
             </div>
+            <div class="welcome-section">
+                <p>Pour en voir plus, consulter la page 'Tout Parcourir'.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <section>
+                <h2>Qui sommes-nous ?</h2>
+                <p>Omness Emmobilier est une agence immobilière unique, dédiée à la communauté emo. Fondée sur des valeurs d'authenticité, d'empathie et de compréhension, notre mission est de créer un espace où chaque individu peut trouver un foyer qui reflète sa véritable essence.</p>
+
+                <h2>Notre Vision</h2>
+                <p>Chez Omness Emmobilier, nous croyons que votre maison devrait être plus qu'un simple lieu de résidence. Elle doit être un sanctuaire,
+                    un refuge où vous pouvez exprimer librement vos émotions et vous sentir en sécurité. Notre vision est de transformer le paysage immobilier en offrant des propriétés qui résonnent avec l'âme de chaque client, en mettant l'accent sur le confort, le style et la singularité.</p>
+
+                <h2>Nos Services</h2>
+                <p>Conseil personnalisé : Nous prenons le temps de comprendre vos besoins et vos aspirations pour vous proposer des biens qui correspondent à votre personnalité et à votre style de vie.
+                    Sélection de propriétés : Des appartements cosy aux maisons gothiques, en passant par les lofts industriels, nous proposons une large gamme de biens immobiliers sélectionnés pour leur caractère unique et leur ambiance particulière.
+                    Assistance complète : De la recherche du bien idéal à la finalisation de l'achat ou de la location, nous vous accompagnons à chaque étape pour garantir une expérience fluide et sans stress.
+                    Communauté et soutien : Nous organisons régulièrement des événements et des rencontres pour renforcer les liens au sein de la communauté emo, créant ainsi un réseau de soutien et de solidarité.</p>
+
+                <h2>Pourquoi choisir Omnes Emmobilier ?</h2>
+                <p>Compréhension profonde : Notre équipe est composée de professionnels qui partagent vos goûts et votre sensibilité, garantissant ainsi une compréhension authentique de vos besoins.
+                    Sélection exclusive : Nous avons accès à des propriétés exclusives qui ne sont pas disponibles sur le marché général, vous offrant des options uniques et souvent cachées.
+                    Engagement et intégrité : Nous nous engageons à offrir un service transparent, honnête et axé sur le client, en mettant toujours vos intérêts en premier.</p>
+            </section>
         </div>
         <footer>
             <p>&copy; 2024 Omnes Emmobilier. Tous droits réservés.</p>
